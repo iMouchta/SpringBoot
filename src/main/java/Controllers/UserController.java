@@ -26,13 +26,11 @@ public class UserController {
         return ResponseEntity.ok().body(userDTO);
     }
     @PutMapping("/{id}")
-    public ResponseEntity<UserDTO> getUsers(){
-        UserDTO userDTO = new UserDTO("user", "user@user");
+    public ResponseEntity<UserDTO> updateUser(@RequestBody UserDTO userDTO){
         return ResponseEntity.ok().body(userDTO);
     }
     @DeleteMapping("/{id}")
-    public ResponseEntity<UserDTO> getUsers(){
-        UserDTO userDTO = new UserDTO("user", "user@user");
+    public ResponseEntity<UserDTO> deleteUser(@RequestBody UserDTO userDTO){
         return ResponseEntity.ok().body(userDTO);
     }
 
